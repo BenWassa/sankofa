@@ -25,8 +25,17 @@ A multi-format, mythic-psychology research and storytelling initiative tackling 
 
 ### 🧭 **What’s Next**
 
-1. Finalize visuals — make the insights *instantly graspable*.
-2. Polish & package the narrative and brief — shareable, grant-ready.
+1. **Launch the Podcast Episode**: 
+   * Finalize the narrative arc and audio production.
+   * Integrate mythic storytelling with research insights.
+   * Ensure emotional resonance and intellectual rigor.
+
+2. **Build the Portfolio Page**:
+   * Host on GitHub Pages.
+   * Include audio companion integration inspired by the Skywalker Quest Map.
+   * Showcase visual assets like the Archetype Wheel and Synthesis Infographic.
+   * Provide easy navigation for podcast episodes, reports, and visual maps.
+
 3. Map episode arcs and multi-use formats:
 
    * **Podcast** (mythic narrative, emotionally resonant)
