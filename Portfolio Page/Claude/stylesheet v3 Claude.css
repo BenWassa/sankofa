@@ -130,14 +130,27 @@ p {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* Portal image as backdrop */
   background:
     var(--primary-dark)
-    url('../../images/Sora_sankofa_cover.png') center center / cover no-repeat;
+    url('../Sora_sankofa_cover.png') center center / contain no-repeat;
   overflow: hidden;
+}
+
+/* Adjust blurred background to fill sides with matching colors and textures */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../Sora_sankofa_cover.png') center center / cover no-repeat;
+  filter: blur(20px) brightness(0.3) saturate(1.5);
+  z-index: 0;
 }
 
 /* Texture overlays */
@@ -145,7 +158,6 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  /* parchment + gold flecks textures */
   background: 
     var(--texture-parchment), 
     var(--texture-gold-flecks);
@@ -186,48 +198,70 @@ p {
 
 /* Title styling: pure gold text + glyph divider */
 .hero-title {
-  font-family: var(--font-serif);
-  color: var(--accent-gold);
+  font-family: 'EB Garamond', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-  position: relative;
+  color: var(--gold-foil);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  margin-bottom: 1rem;
 }
 
-/* Decorative glyph under title */
 .hero-title::after {
   content: "✦";
   display: block;
-  color: var(--accent-gold);
-  opacity: 0.7;
-  font-size: 1.2rem;
-  margin: 0.5rem auto 1.5rem;
+  font-size: 1.5rem;
+  color: var(--gold-foil);
+  margin-top: 0.5rem;
 }
 
-/* Subtitle: muted, italic */
+/* Subtitle styling */
 .hero-subtitle {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  color: var(--text-secondary);
   font-style: italic;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
-/* Description: centered, muted */
+/* Description styling */
 .hero-description {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-secondary);
+  margin-bottom: 2rem;
 }
 
-/* CTA buttons: unchanged */
-.hero-actions {
+/* Buttons */
+.hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
+.button-primary {
+  background: linear-gradient(90deg, #d1b000, #ffd700);
+  color: #0a0a0a;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-3px);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--gold-foil);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--gold-foil);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-3px);
+}
 
 /* Navigation with Ancient Dividers */
 .nav {
@@ -298,12 +332,16 @@ p {
     width: 100%;
 }
 
+/* Nav-divider with Sankofa icon - accent gold colored and properly sized */
 .nav-divider {
-    color: var(--accent-gold);
-    opacity: 0.6;
-    font-size: 1.2rem;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url('../Sankofa_icon.png') center center / contain no-repeat;
+    opacity: 0.8;
     transition: var(--transition-smooth);
-    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+    /* Apply accent gold color filter to match #d4af37 */
+    filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(652%) hue-rotate(6deg) brightness(95%) contrast(88%);
 }
 
 .nav-divider:hover {
