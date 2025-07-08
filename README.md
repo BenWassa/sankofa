@@ -54,3 +54,36 @@ Balance *Story* and *Science*: Combine rigor and mythic emotional resonance so i
 ## 🔑 **Bottom Line**
 
 **Project Sankofa** is an intellectual ecosystem and narrative weapon to re-weave modern meaning, built on real research, delivered in compelling story form, and expandable for future products.
+
+## 📂 **Codebase Structure**
+
+```
+sankofa/
+├── Commissioning/
+│   ├── Initial Page.md
+│   ├── Style upgrades.md
+├── Inputs/
+│   ├── all Distilled findings_raw.txt
+├── Portfolio Page/
+│   ├── image 2.png
+│   ├── image1.jpg
+│   ├── Sora_sankofa_cover.png
+│   ├── Claude/
+│   │   ├── index Claude v2.html
+│   │   ├── stylesheet v3 Claude.css
+│   │   ├── old/
+│   │   │   ├── index Claude v1.html
+│   │   │   ├── Preview_Claude v1.pdf
+│   │   │   ├── stylesheet v1 Claude.css
+│   │   │   ├── stylesheet v2 Claude.css
+│   ├── Gemini/
+│   │   ├── index Gemini.html
+│   │   ├── Preview_Gemini v1.pdf
+│   │   ├── stylesheet v1 Gemini.css
+├── Production Docs/
+│   ├── cinematic cold open.md
+│   ├── Executive Brief - Project Sankofa.md
+│   ├── Sankofa Synthesis Map.md
+├── README.md
+├── sankofa.code-workspace
+```

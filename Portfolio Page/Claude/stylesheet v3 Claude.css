@@ -136,7 +136,7 @@ p {
   /* Portal image as backdrop */
   background:
     var(--primary-dark)
-    url('Portfolio Page/Sora_sankofa_cover.png') center center / cover no-repeat;
+    url('../../images/Sora_sankofa_cover.png') center center / cover no-repeat;
   overflow: hidden;
 }
 
