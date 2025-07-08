@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sankofa Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header id="hero" class="section">
+        <div class="hero-content">
+            <h1>Project Sankofa Portfolio (v1)</h1>
+            <p class="tagline">A mythic, research-rooted hub: podcast • visuals • executive brief • story.</p>
+            <div class="cta-buttons">
+                <a href="#podcast" class="button primary">Explore the Podcast</a>
+                <a href="#visuals" class="button secondary">Dive into Visuals</a>
+            </div>
+            <!-- REACT_COMPONENT: Hero CTA -->
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="nav-item">Home</a>
+            <a href="#podcast" class="nav-item">Podcast</a>
+            <a href="#visuals" class="nav-item">Visuals</a>
+            <a href="#brief" class="nav-item">Brief</a>
+            <a href="#about" class="nav-item">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="podcast" class="section">
+            <div class="section-content">
+                <h2>The Sankofa Podcast</h2>
+                <p>Delve into the ancestral wisdom and future narratives through our audio journeys.</p>
+                <div class="audio-player-container">
+                    <audio controls class="custom-audio-player">
+                        <source src="audio/podcast.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <!-- REACT_COMPONENT: Podcast Player -->
+                <p class="placeholder-text">Listen to the latest episode: "Echoes from the Future Past".</p>
+            </div>
+        </section>
+
+        <section id="visuals" class="section">
+            <div class="section-content">
+                <h2>Visual Library</h2>
+                <p>A curated collection of imagery that brings our mythic research to life.</p>
+                <div class="image-gallery">
+                    <div class="image-card">
+                        <img src="images/archetype.svg" alt="Abstract representation of an archetype">
+                        <p>Ancient Archetypes</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://via.placeholder.com/300x200?text=Mythic+Landscape" alt="Placeholder for a mythic landscape">
+                        <p>Mythic Landscapes</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="https://via.placeholder.com/300x200?text=Future+Visions" alt="Placeholder for futuristic visions">
+                        <p>Future Visions</p>
+                    </div>
+                    <!-- REACT_COMPONENT: Visual Library Cards -->
+                </div>
+            </div>
+        </section>
+
+        <section id="brief" class="section">
+            <div class="section-content">
+                <h2>Executive Brief</h2>
+                <p>An overview of Project Sankofa's mission, methodology, and impact.</p>
+                <a href="briefs/executive-brief.pdf" target="_blank" class="button primary">Download Executive Brief (PDF)</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2>About Project Sankofa</h2>
+                <p>Project Sankofa is an initiative dedicated to exploring the intersection of ancient wisdom, contemporary research, and speculative futures. Drawing inspiration from the Akan concept of Sankofa – 'go back and get it' – we aim to retrieve valuable knowledge from the past to inform and enrich our understanding of the present and shape a more conscious future. This portfolio serves as a central hub for our multi-faceted output, including podcasts, visual narratives, and strategic briefs.</p>
+                <!-- REACT_COMPONENT: About Section -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Project Sankofa. All rights reserved.</p>
+            <p>Designed with a spirit of mythic exploration.</p>
+        </div>
+    </footer>
+</body>
+</html>
