@@ -20,6 +20,7 @@ A multi-format, mythic-psychology research and storytelling initiative tackling 
 * Drafted a **2-page Executive Brief**: Structured, citation-backed summary for funders, educators, or policy allies.
 * Set up a **NotebookLM library**: Fully tagged knowledge base for ongoing querying and future expansions.
 * Visual asset(s) in development: e.g., Archetype Wheel or Synthesis Infographic.
+* Created the **Portfolio Page**: A GitHub-hosted showcase integrating audio companions and visual assets.
 
 ---
 
@@ -30,11 +31,10 @@ A multi-format, mythic-psychology research and storytelling initiative tackling 
    * Integrate mythic storytelling with research insights.
    * Ensure emotional resonance and intellectual rigor.
 
-2. **Build the Portfolio Page**:
-   * Host on GitHub Pages.
-   * Include audio companion integration inspired by the Skywalker Quest Map.
-   * Showcase visual assets like the Archetype Wheel and Synthesis Infographic.
-   * Provide easy navigation for podcast episodes, reports, and visual maps.
+2. **Enhance the Portfolio Page**:
+   * Expand audio companion integration inspired by the Skywalker Quest Map.
+   * Add interactive elements for visual assets like the Archetype Wheel and Synthesis Infographic.
+   * Ensure seamless navigation for podcast episodes, reports, and visual maps.
 
 3. Map episode arcs and multi-use formats:
 
