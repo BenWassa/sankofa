@@ -292,6 +292,18 @@ p {
     color: var(--accent-gold);
     text-decoration: none;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../Sankofa_icon.png') center center / contain no-repeat;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(652%) hue-rotate(6deg) brightness(95%) contrast(88%);
 }
 
 .nav-menu {
@@ -332,21 +344,14 @@ p {
     width: 100%;
 }
 
-/* Nav-divider with Sankofa icon - accent gold colored and properly sized */
+/* Simple nav divider - subtle vertical line */
 .nav-divider {
     display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: url('../Sankofa_icon.png') center center / contain no-repeat;
-    opacity: 0.8;
-    transition: var(--transition-smooth);
-    /* Apply accent gold color filter to match #d4af37 */
-    filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(652%) hue-rotate(6deg) brightness(95%) contrast(88%);
-}
-
-.nav-divider:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    width: 1px;
+    height: 16px;
+    background: var(--accent-gold);
+    opacity: 0.3;
+    margin: 0 0.5rem;
 }
 
 /* Buttons */
