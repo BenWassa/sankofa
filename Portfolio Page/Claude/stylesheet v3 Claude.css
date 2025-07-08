@@ -488,7 +488,7 @@ p {
     height: 60px;
     margin-bottom: 1rem;
     border-radius: var(--border-radius);
-    background: var(--secondary-dark);
+    background: transparent;
     filter: sepia(0.3) hue-rotate(30deg) saturate(1.2);
 }
 
@@ -496,6 +496,7 @@ p {
     color: var(--text-secondary);
     font-style: italic;
     text-align: center;
+    font-size: 1rem;
 }
 
 /* Visual Library with Ancient Corners */
@@ -610,8 +611,8 @@ p {
 
 .about-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
     margin-top: 3rem;
 }
 
@@ -703,6 +704,7 @@ p {
     
     .about-features {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .container {
@@ -711,6 +713,13 @@ p {
     
     .nav-container {
         justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 
