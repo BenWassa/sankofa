@@ -168,7 +168,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: var(--primary-dark) url('../Media/Sankofa_back_blur_PNG.png') center 30% / cover no-repeat;
+  background: var(--primary-dark) url('../Docs/Media/Sankofa_back_blur_PNG.png') center 30% / cover no-repeat;
   background-size: 115%;
   overflow: hidden;
   filter: blur(0.2px) brightness(1.1) saturate(1.1);
@@ -340,7 +340,7 @@ p {
   margin-right: 0.5rem;
   background: 
     radial-gradient(circle at center, rgba(212, 170, 55, 0.116) 5%, rgba(212, 149, 55, 0) 80%, rgba(212, 157, 55, 0.719) 100%),
-    url('../Media/Sankofa_icon.png') center center / 40px 40px no-repeat,
+    url('../Docs/Media/Sankofa_icon.png') center center / 40px 40px no-repeat,
     var(--accent-gold);
   filter: blur(0.5px) drop-shadow(0 0 12px #d4af37cc);
   border-radius: 50%;
