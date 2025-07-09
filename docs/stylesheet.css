@@ -190,7 +190,7 @@ p {
   z-index: 2;
   max-width: 800px; /* Constrain width if needed */
   /* Final positioning - independent of animation */
-  transform: translateY(140px); /* Static final position */
+  transform: translateY(120px); /* Static final position */
   /* Animation */
   animation: fadeInUp 1s ease-out;
 }
@@ -210,32 +210,34 @@ p {
 /* Title styling: pure gold text + glyph divider */
 .hero-title {
   font-family: 'Cinzel', serif;
-  font-size: 1.3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--accent-gold);
   text-shadow: 
-    0 0 20px rgba(226, 172, 56, 0.8),
+    0 0 20px rgba(249, 191, 0, 0.733),
     0 0 40px rgba(212, 175, 55, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.6),
     0 0 8px rgba(212, 175, 55, 0.6);
   margin-bottom: 2rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
-  word-spacing: 0.2em;
+  word-spacing: 0.4em;
+  width: 600px;
 }
 
-.hero-title::after {
+.hero-translation::after {
   content: '⟡ ⟡ ⟡';
   display: block;
   font-size: 1.2rem;
   color: var(--accent-gold);
-  margin-top: 3.4rem;
+  margin-top: 1.4rem;
   opacity: 1;
   text-shadow: 0 0 10px rgba(230, 188, 53, 0.756);
   letter-spacing: 0.5rem;
   animation: glyphGlow 3s ease-in-out infinite alternate;
-  filter: saturate(1.2), brightness(1.5);
+  filter: saturate(1.2), brightness(1.2);
 }
 
 @keyframes glyphGlow {
@@ -257,13 +259,25 @@ p {
   font-weight: 500;
   position: relative;
 }
+/* Translation styling */
+.hero-translation {
+    font-size: 0.8rem;
+    color: rgba(243, 242, 236, 0.9);
+    font-style: italic;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    text-shadow: 
+    0 0 15px rgba(212, 175, 55, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.7);
+}
 
 /* Description styling */
 .hero-description {
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1rem;
   color: rgba(204, 204, 204, 0.95);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
