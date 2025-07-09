@@ -168,7 +168,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: var(--primary-dark) url('../Media/Sankofa_back_blur_PNG.png') center 42% / cover no-repeat;
+  background: var(--primary-dark) url('../Media/Sankofa_back_blur_PNG.png') center 30% / cover no-repeat;
   background-size: 115%;
   overflow: hidden;
   filter: blur(0.2px) brightness(1.1) saturate(1.1);
@@ -190,7 +190,7 @@ p {
   z-index: 2;
   animation: fadeInUpFromPosition 1s ease-out;
   /* Add these for positioning control: */
-  transform: translateY(90px); /* Move entire content block up/down */
+  transform: translateY(140px); /* Move entire content block up/down */
   max-width: 800px; /* Constrain width if needed */
 }
 /* Fade-in up keyframe - updated to account for final position */
@@ -208,6 +208,7 @@ p {
 /* Title styling: pure gold text + glyph divider */
 .hero-title {
   font-family: 'Cinzel', serif;
+  font-style: italic;
   font-size: 1.35rem;
   font-weight: 600;
   color: var(--accent-gold);
@@ -220,6 +221,7 @@ p {
   letter-spacing: 0.08em;
   position: relative;
   text-transform: uppercase;
+  word-spacing: 0.2em;
 }
 
 .hero-title::after {
@@ -227,7 +229,7 @@ p {
   display: block;
   font-size: 1.2rem;
   color: var(--accent-gold);
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   opacity: 0.9;
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
   letter-spacing: 0.5rem;
