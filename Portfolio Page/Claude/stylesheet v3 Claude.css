@@ -252,42 +252,34 @@ p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-secondary);
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+/* Hero Actions - Clean and Minimal */
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.button-primary {
-  background: linear-gradient(90deg, #d1b000, #ffd700);
-  color: #0a0a0a;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.button-primary:hover {
-  transform: translateY(-3px);
-}
-
-.button-secondary {
-  background: transparent;
-  color: var(--gold-foil);
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--gold-foil);
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.button-secondary:hover {
-  transform: translateY(-3px);
+/* Subtle divider between buttons on desktop */
+.hero-actions .btn:first-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 20px;
+    background: var(--accent-gold);
+    opacity: 0.2;
+    border-radius: 1px;
 }
 
 /* Navigation with Ancient Dividers */
@@ -771,6 +763,12 @@ p {
     .hero-actions {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+    
+    /* Hide divider on mobile */
+    .hero-actions .btn:first-child::after {
+        display: none;
     }
     
     .visual-grid {

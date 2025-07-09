@@ -1,3 +1,34 @@
+/* Archetype Wheel Image Styling */
+.archetype-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2.5rem auto;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.507), 0 2px 8px rgba(245, 215, 83, 0.18);
+    border-radius: 18px;
+    background: var(--accent-dark);
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+    max-width: fit-content;
+    width: auto;
+}
+
+.archetype-image-wrapper:hover {
+    box-shadow: 0 16px 48px rgba(212, 175, 55, 0.28), 0 4px 16px rgba(0,0,0,0.22);
+}
+
+.archetype-image {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.10);
+    background: var(--secondary-dark);
+}
 /* Project Sankofa - Mythic Psychology Portfolio */
 /* Ancient styling with modern functionality */
 
@@ -136,7 +167,7 @@ p {
   text-align: center;
   background:
     var(--primary-dark)
-    url('../Media/Sora_sankofa_cover.png') center center / contain no-repeat;
+    url('../Media/Sankofa_back_SVG.svg') center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -201,7 +232,7 @@ p {
   font-family: 'EB Garamond', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   color: var(--gold-foil);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 10px rgba(255, 217, 0, 0.637);
   margin-bottom: 1rem;
 }
 
@@ -299,13 +330,18 @@ p {
   width: 52px;
   height: 52px;
   margin-right: 0.5rem;
-  background: url('../Media/Sankofa_icon.png') center center / contain no-repeat;
-  filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(652%) hue-rotate(6deg) brightness(95%) contrast(88%);
-  opacity: 0;
-  box-shadow: 0 0 24px 6px #d4af37, 0 0 60px 12px rgba(212,175,55,0.18);
-  animation: sankofaFadeIn 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s forwards;
+  background: 
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.116) 5%, rgba(212, 175, 55, 0) 80%, rgba(212, 175, 55, 0.719) 100%),
+    url('../Media/Sankofa_icon.png') center center / 40px 40px no-repeat,
+    var(--accent-gold);
+  filter: blur(0.5px) drop-shadow(0 0 12px #d4af37cc);
   border-radius: 50%;
+  box-shadow: 0 0 12px 4px #d4af37c0, 0 0 10px 5px rgba(212,175,55,0.18);
+  border: 2.5px solid var(--accent-gold);
   vertical-align: middle;
+  position: relative;
+  opacity: 0;
+  animation: sankofaFadeIn 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s forwards;
 }
 
 @keyframes sankofaFadeIn {
@@ -449,8 +485,8 @@ p {
 .section-title {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--text-primary);
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    color: rgb(253, 237, 220);
+    text-shadow: 0 0 15px rgba(245, 212, 68, 0.432);
 }
 
 .section-description {
@@ -567,12 +603,19 @@ p {
 
 .visual-image {
     width: 100%;
-    height: 200px;
+    height: auto;
+    max-height: 260px;
     object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
-    background: var(--secondary-dark);
+    background: transparent;
     border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18), 0 2px 8px rgba(0,0,0,0.18);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -8px;
 }
 
 .visual-title {
