@@ -49,14 +49,16 @@
     --accent-blue: #3b82f6;
     --papyrus-light: #f4f1e8;
     --papyrus-dark: #2d2520;
+    --gold-foil: #f4d03f;
     
     /* Gradients */
     --gradient-mythic: linear-gradient(135deg, #ecc02c 0%, #923d0b 100%), var(--texture-gold-flecks);
     --gradient-parchment: linear-gradient(135deg, rgba(244, 241, 232, 0.05), rgba(212, 175, 55, 0.03));
     
     /* Typography */
-    --font-serif: 'EB Garamond', Georgia, serif;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Cinzel', 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    --font-garamond: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Spectral', Georgia, serif;
     
     /* Shadows & Effects */
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -157,6 +159,7 @@ p {
 }
 
 /* Hero Section Refactor */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -165,37 +168,10 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    var(--primary-dark)
-    url('../Media/test.png') center center / contain no-repeat;
+  background: var(--primary-dark) url('../Media/Sankofa_back_blur_PNG.png') center 42% / cover no-repeat;
+  background-size: 115%;
   overflow: hidden;
-}
-
-/* Adjust blurred background to fill sides with matching colors and textures */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url('../Media/Sora_sankofa_cover.png') center center / cover no-repeat;
-  filter: blur(20px) brightness(0.3) saturate(1.5);
-  z-index: 0;
-}
-
-/* Texture overlays */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    var(--texture-parchment), 
-    var(--texture-gold-flecks);
-  background-blend-mode: multiply;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 1;
+  filter: blur(0.2px) brightness(1.1) saturate(1.1);
 }
 
 /* Subtle dark overlay for contrast */
@@ -212,49 +188,85 @@ p {
 .hero-content {
   position: relative;
   z-index: 2;
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUpFromPosition 1s ease-out;
+  /* Add these for positioning control: */
+  transform: translateY(90px); /* Move entire content block up/down */
+  max-width: 800px; /* Constrain width if needed */
 }
-
-/* Fade-in up keyframe (unchanged) */
-@keyframes fadeInUp {
+/* Fade-in up keyframe - updated to account for final position */
+@keyframes fadeInUpFromPosition {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(95px); /* Start 30px below final position (65px + 30px) */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(65px); /* End at your desired final position */
   }
 }
 
 /* Title styling: pure gold text + glyph divider */
 .hero-title {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--gold-foil);
-  text-shadow: 0 0 10px rgba(255, 217, 0, 0.637);
-  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-shadow: 
+    0 0 20px rgba(226, 172, 56, 0.8),
+    0 0 40px rgba(212, 175, 55, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(212, 175, 55, 0.6);
+  margin-bottom: 2rem;
+  letter-spacing: 0.08em;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .hero-title::after {
-  content: none;
+  content: '⟡ ⟡ ⟡';
+  display: block;
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  margin-top: 2rem;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  letter-spacing: 0.5rem;
+  animation: glyphGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glyphGlow {
+  from { opacity: 0.5; transform: scale(0.98); }
+  to { opacity: 0.9; transform: scale(1.02); }
 }
 
 /* Subtitle styling */
 .hero-subtitle {
+  font-family: var(--font-garamond);
   font-style: italic;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(244, 208, 63, 0.9);
+  margin-bottom: 2rem;
+  text-shadow: 
+    0 0 15px rgba(212, 175, 55, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  position: relative;
 }
 
 /* Description styling */
 .hero-description {
+  font-family: var(--font-sans);
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-  max-width: 600px;
+  color: rgba(204, 204, 204, 0.95);
+  margin-bottom: 2.5rem;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 /* Hero Actions - Clean and Minimal */
