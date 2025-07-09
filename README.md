@@ -65,23 +65,26 @@ sankofa/
 │   ├── Initial Page.md
 │   ├── Style upgrades.md
 ├── Inputs/
-│   ├── all Distilled findings_raw.txt
+│   └── all Distilled findings_raw.txt
 ├── Portfolio Page/
-│   ├── image 2.png
-│   ├── image1.jpg
-│   ├── Sora_sankofa_cover.png
 │   ├── Claude/
 │   │   ├── index Claude v2.html
 │   │   ├── stylesheet v3 Claude.css
-│   │   ├── old/
-│   │   │   ├── index Claude v1.html
-│   │   │   ├── Preview_Claude v1.pdf
-│   │   │   ├── stylesheet v1 Claude.css
-│   │   │   ├── stylesheet v2 Claude.css
+│   │   └── old/
+│   │       ├── index Claude v1.html
+│   │       ├── Preview_Claude v1.pdf
+│   │       ├── stylesheet v1 Claude.css
+│   │       ├── stylesheet v2 Claude.css
 │   ├── Gemini/
 │   │   ├── index Gemini.html
 │   │   ├── Preview_Gemini v1.pdf
 │   │   ├── stylesheet v1 Gemini.css
+│   ├── Media/
+│   │   ├── image 2.png
+│   │   ├── image1.jpg
+│   │   ├── Project Sankofa.mp3
+│   │   ├── Sankofa_icon.png
+│   │   └── Sora_sankofa_cover.png
 ├── Production Docs/
 │   ├── cinematic cold open.md
 │   ├── Executive Brief - Project Sankofa.md
