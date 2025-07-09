@@ -136,7 +136,7 @@ p {
   text-align: center;
   background:
     var(--primary-dark)
-    url('../Sora_sankofa_cover.png') center center / contain no-repeat;
+    url('../Media/Sora_sankofa_cover.png') center center / contain no-repeat;
   overflow: hidden;
 }
 
@@ -148,7 +148,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../Sora_sankofa_cover.png') center center / cover no-repeat;
+  background: url('../Media/Sora_sankofa_cover.png') center center / cover no-repeat;
   filter: blur(20px) brightness(0.3) saturate(1.5);
   z-index: 0;
 }
@@ -299,7 +299,7 @@ p {
   width: 52px;
   height: 52px;
   margin-right: 0.5rem;
-  background: url('../Sankofa_icon.png') center center / contain no-repeat;
+  background: url('../Media/Sankofa_icon.png') center center / contain no-repeat;
   filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(652%) hue-rotate(6deg) brightness(95%) contrast(88%);
   opacity: 0;
   box-shadow: 0 0 24px 6px #d4af37, 0 0 60px 12px rgba(212,175,55,0.18);
