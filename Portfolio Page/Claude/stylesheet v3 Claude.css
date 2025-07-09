@@ -167,7 +167,7 @@ p {
   text-align: center;
   background:
     var(--primary-dark)
-    url('../Media/Sora_sankofa_cover.png') center center / contain no-repeat;
+    url('../Media/Sankofa_back_SVG.svg') center center / cover no-repeat;
   overflow: hidden;
 }
 

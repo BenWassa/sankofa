@@ -24,6 +24,7 @@ Project Sankofa is a multi-format, mythic-psychology research and storytelling i
   - **Responsive Navigation**: Clean, accessible nav with dividers and animated Sankofa icon.
   - **About & Archetypes**: Three archetype features displayed in a responsive grid.
 - **Styling**: Custom CSS (`stylesheet v3 Claude.css`) with ancient-mythic palette, gold/bronze accents, parchment textures, and modern accessibility. Fully responsive and accessible.
+- **Background Update**: The Sankofa SVG background image was updated and expanded in Canva to better fit the page. (See `Portfolio Page/Media/Sankofa_back_SVG.svg`)
 - **NotebookLM Library**: Tagged knowledge base for ongoing querying and future expansions.
 
 ---
