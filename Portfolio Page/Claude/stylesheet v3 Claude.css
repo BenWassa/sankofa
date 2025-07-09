@@ -1,3 +1,34 @@
+/* Archetype Wheel Image Styling */
+.archetype-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2.5rem auto;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18), 0 2px 8px rgba(0,0,0,0.18);
+    border-radius: 18px;
+    background: var(--accent-dark);
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+    transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.archetype-image-wrapper:hover {
+    box-shadow: 0 16px 48px rgba(212, 175, 55, 0.28), 0 4px 16px rgba(0,0,0,0.22);
+}
+
+.archetype-image {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.10);
+    background: var(--secondary-dark);
+}
 /* Project Sankofa - Mythic Psychology Portfolio */
 /* Ancient styling with modern functionality */
 
@@ -567,12 +598,19 @@ p {
 
 .visual-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
-    background: var(--secondary-dark);
+    background: transparent;
     border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18), 0 2px 8px rgba(0,0,0,0.18);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -8px;
 }
 
 .visual-title {
