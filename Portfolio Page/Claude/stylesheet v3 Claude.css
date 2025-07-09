@@ -51,7 +51,7 @@
     --papyrus-dark: #2d2520;
     
     /* Gradients */
-    --gradient-mythic: linear-gradient(135deg, #6b46c1, #d4af37);
+    --gradient-mythic: linear-gradient(135deg, #ecc02c 0%, #923d0b 100%), var(--texture-gold-flecks);
     --gradient-parchment: linear-gradient(135deg, rgba(244, 241, 232, 0.05), rgba(212, 175, 55, 0.03));
     
     /* Typography */
@@ -310,7 +310,7 @@ p {
     font-weight: 700;
     color: var(--accent-gold);
     text-decoration: none;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    text-shadow: 0 0 10px rgba(212, 170, 55, 0.5);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -323,7 +323,7 @@ p {
   height: 52px;
   margin-right: 0.5rem;
   background: 
-    radial-gradient(circle at center, rgba(212, 175, 55, 0.116) 5%, rgba(212, 175, 55, 0) 80%, rgba(212, 175, 55, 0.719) 100%),
+    radial-gradient(circle at center, rgba(212, 170, 55, 0.116) 5%, rgba(212, 149, 55, 0) 80%, rgba(212, 157, 55, 0.719) 100%),
     url('../Media/Sankofa_icon.png') center center / 40px 40px no-repeat,
     var(--accent-gold);
   filter: blur(0.5px) drop-shadow(0 0 12px #d4af37cc);
