@@ -188,28 +188,29 @@ p {
 .hero-content {
   position: relative;
   z-index: 2;
-  animation: fadeInUpFromPosition 1s ease-out;
-  /* Add these for positioning control: */
-  transform: translateY(140px); /* Move entire content block up/down */
   max-width: 800px; /* Constrain width if needed */
+  /* Final positioning - independent of animation */
+  transform: translateY(140px); /* Static final position */
+  /* Animation */
+  animation: fadeInUp 1s ease-out;
 }
-/* Fade-in up keyframe - updated to account for final position */
-@keyframes fadeInUpFromPosition {
+
+/* Clean fade-in animation - no positioning changes */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(95px); /* Start 30px below final position (65px + 30px) */
+    transform: translateY(140px) translateY(30px); /* Current position + 30px offset */
   }
   to {
     opacity: 1;
-    transform: translateY(65px); /* End at your desired final position */
+    transform: translateY(140px); /* Back to final position */
   }
 }
 
 /* Title styling: pure gold text + glyph divider */
 .hero-title {
   font-family: 'Cinzel', serif;
-  font-style: italic;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--accent-gold);
   text-shadow: 
@@ -229,11 +230,12 @@ p {
   display: block;
   font-size: 1.2rem;
   color: var(--accent-gold);
-  margin-top: 2.4rem;
-  opacity: 0.9;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  margin-top: 3.4rem;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(230, 188, 53, 0.756);
   letter-spacing: 0.5rem;
   animation: glyphGlow 3s ease-in-out infinite alternate;
+  filter: saturate(1.2), brightness(1.5);
 }
 
 @keyframes glyphGlow {
