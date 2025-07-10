@@ -193,7 +193,7 @@ p {
   margin: 0 auto;
   padding: 0 2rem;
   /* Final positioning - matches animation end state */
-  transform: translateY(95px); /* Static final position */
+  transform: translateY(115px); /* Static final position */
   /* Animation */
   animation: fadeInUp 1s ease-out;
 }
@@ -202,11 +202,11 @@ p {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(95px) translateY(30px); /* Final position + 30px offset */
+    transform: translateY(115px) translateY(30px); /* Final position + 30px offset */
   }
   to {
     opacity: 1;
-    transform: translateY(95px); /* Matches final positioning exactly */
+    transform: translateY(115px); /* Matches final positioning exactly */
   }
 }
 
@@ -226,7 +226,7 @@ p {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  word-spacing: 0.4em;
+  word-spacing: 0.2em;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
