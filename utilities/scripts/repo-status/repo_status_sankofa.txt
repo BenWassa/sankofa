@@ -1,0 +1,103 @@
+==============================
+PROJECT SANKOFA - REPO SNAPSHOT  
+Generated: Mon, Jul 14, 2025 04:53:20 PM
+==============================
+
+[PROJECT OVERVIEW]
+Project: Project Sankofa
+Type: Research & Documentation Repository with GitHub Pages
+Description: Multi-format, mythic-psychology research and storytelling initiative tackling the Modern Meaning Crisis
+Author: benjamin.haddon
+Repository: BenWassa/sankofa
+Structure: Organized repository with GitHub Pages site
+
+[REPOSITORY STRUCTURE STATUS]
+
+[MAIN DIRECTORIES]
+✓ PASS docs/ - GitHub Pages site (PROTECTED - live website) - 8 items
+✓ PASS development/ - Development iterations and assets - 32 items
+✓ PASS content/ - Research, briefs, and documentation - 10 items
+✓ PASS assets/ - Organized media files - 18 items
+✓ PASS utilities/ - Tools and scripts - 8 items
+✗ FAIL archive/ - MISSING - Historical organization
+
+[GITHUB PAGES STATUS]
+✓ PASS docs/index.html - 8.8KB - READY
+✓ PASS docs/stylesheet.css - 19.9KB - READY
+✓ PASS docs/A - final_PNG.png - 1904.8KB - READY
+✓ PASS docs/Executive Brief.pdf - 108.9KB - READY
+✓ PASS docs/Project Sankofa.mp3 - 23601.3KB - READY
+
+[CONTENT ORGANIZATION]
+✓ PASS content/briefs/ - 4 files - Executive briefs and production documents
+    - cinematic cold open.md
+    - Executive Brief - Project Sankofa.md
+    - Executive Brief.pdf
+    ... and 1 more files
+✓ PASS content/commissioning/ - 2 files - Project commissioning documents
+    - Initial Page.md
+    - Style upgrades.md
+✓ PASS content/research/ - 1 files - Research inputs and findings
+    - all Distilled findings_raw.txt
+
+[ASSETS ORGANIZATION]
+✓ PASS assets/images/ - 8 files - Images and visual assets
+    - archetype-wheel
+    - image 2.png
+    - image1.jpg
+    ... and 5 more files
+✓ PASS assets/audio/ - 1 files - Audio content
+    - Project Sankofa.mp3
+✓ PASS assets/documents/ - 0 files - Document assets
+
+[DEVELOPMENT STRUCTURE]
+✓ PASS development/portfolio-iterations/ - 15 items - Website iterations and backups
+✓ PASS development/assets/ - 15 items - Development asset backups
+
+[GIT STATUS]
+Working directory changes:
+?? utilities/
+✓ Current branch: main
+
+[KEY FILES STATUS]
+✓ PASS README.md - 6.3KB - Main documentation
+✓ PASS docs/index.html - 8.8KB - GitHub Pages main page
+✓ PASS docs/stylesheet.css - 19.9KB - GitHub Pages styling
+✓ PASS cleanup-repo.ps1 - 8.6KB - Repository organization script
+✓ PASS .gitignore - 0.8KB - Git ignore configuration
+✓ PASS CLEANUP-INSTRUCTIONS.md - 2.9KB - Cleanup instructions
+
+[RECENT ACTIVITY]
+Recent commits:
+c172973 del
+af6d069 clean up of repo from template repo
+1f1023a exec brief path fix
+a1cdb05 link mp3
+358e454 update file paths
+
+[SUMMARY]
+Project: Project Sankofa
+Type: Research & Documentation Repository with GitHub Pages
+Status: Organized and ready for development
+GitHub Pages: docs/ folder ready for publishing
+Repository Structure: Clean and organized
+Generated: utilities/scripts/repo-status/repo_status_sankofa.txt
+
+[AI ASSISTANT READY]
+This repository is well-organized for AI assistance:
+✓ GitHub Pages site protected in docs/
+✓ Development work organized in development/
+✓ Research content structured in content/
+✓ Assets properly categorized in assets/
+✓ Archive maintains historical organization
+
+Ready to share with AI assistants for further development!
+
+[NEXT STEPS FOR AI]
+1. The docs/ folder contains the live GitHub Pages site
+2. Development iterations are in development/portfolio-iterations/
+3. Research materials are in content/
+4. Media assets are organized in assets/
+5. Historical organization preserved in archive/
+
+Repository is clean and ready for AI-assisted development!
