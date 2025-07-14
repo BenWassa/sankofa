@@ -1,0 +1,334 @@
+/* Generated CSS for Mythic Sankofa Portfolio Page */
+/* This CSS is designed to create a visually appealing, dark-themed portfolio page with smooth animations and transitions. */
+:root {
+    /* Color Palette */
+    --color-background-dark: #0a0a0a;
+    --color-surface-dark: #1a1a1a;
+    --color-text-light: #e0e0e0;
+    --color-accent-primary: #8a4baf; /* Deep mythical purple */
+    --color-accent-secondary: #4b8aaf; /* Serene blue */
+    --color-highlight: #d1b000; /* Golden highlight */
+    --color-border: #333;
+
+    /* Typography */
+    --font-family-primary: 'Georgia', serif;
+    --font-family-secondary: 'Arial', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-ease: ease-in-out;
+}
+
+/* Global Resets & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* For smooth anchor scrolling */
+}
+
+body {
+    font-family: var(--font-family-secondary);
+    color: var(--color-text-light);
+    background-color: var(--color-background-dark);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Fluid Typography */
+h1 {
+    font-family: var(--font-family-primary);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--color-highlight);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font-family-primary);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--color-accent-primary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: var(--color-accent-secondary);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Section Styling */
+.section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--color-surface-dark);
+    border-bottom: 1px solid var(--color-border);
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial state for animation */
+    animation: fadeInUp 1s forwards ease-out;
+}
+
+.section:nth-of-type(odd) {
+    background-color: var(--color-background-dark);
+}
+
+/* Stagger animation for sections (CSS-only approximation of "scroll effects") */
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.4s; } /* Hero is first, then first section after nav (podcast) */
+.section:nth-of-type(3) { animation-delay: 0.6s; } /* Visuals */
+.section:nth-of-type(4) { animation-delay: 0.8s; } /* Brief */
+.section:nth-of-type(5) { animation-delay: 1.0s; } /* About */
+
+.section-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080?text=Mythic+Sankofa+Background') center center / cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-md);
+    border-bottom: none; /* No border for hero */
+}
+
+.hero-content {
+    padding: var(--spacing-md);
+    max-width: 800px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--color-surface-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+}
+
+.nav-item {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 5px;
+    transition: background-color var(--transition-speed) var(--transition-ease),
+                color var(--transition-speed) var(--transition-ease);
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-light);
+    outline: none; /* Remove default focus outline */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    transition: background-color var(--transition-speed) var(--transition-ease),
+                transform var(--transition-speed) var(--transition-ease);
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.button.primary {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-light);
+}
+
+.button.primary:hover,
+.button.primary:focus {
+    background-color: var(--color-highlight);
+    transform: translateY(-3px);
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--color-accent-secondary);
+    border: 2px solid var(--color-accent-secondary);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+    background-color: var(--color-accent-secondary);
+    color: var(--color-background-dark);
+    transform: translateY(-3px);
+}
+
+/* Audio Player */
+.audio-player-container {
+    background-color: var(--color-background-dark);
+    border-radius: 10px;
+    padding: var(--spacing-sm);
+    margin: var(--spacing-md) auto;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.custom-audio-player {
+    width: 100%;
+    /* Basic styling for native controls.
+       Full customization of native <audio> controls via CSS is very limited
+       and inconsistent across browsers. These styles apply to the player box
+       and attempt some visual changes to default controls. */
+    background-color: var(--color-surface-dark);
+    border-radius: 8px;
+    padding: var(--spacing-xs);
+    /* Attempt to tint controls, may not work universally */
+    filter: invert(100%) hue-rotate(180deg) brightness(150%) saturate(150%);
+}
+
+/* Visual Library */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.image-card {
+    background-color: var(--color-background-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform var(--transition-speed) var(--transition-ease);
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-card p {
+    text-align: center;
+    padding: var(--spacing-sm);
+    font-size: 1.05rem;
+    color: var(--color-accent-secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-surface-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(2rem, 9vw, 3.5rem);
+    }
+    h2 {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+    }
+    .section {
+        padding: var(--spacing-lg) var(--spacing-xs);
+    }
+    .section-content {
+        padding: 0 var(--spacing-xs);
+    }
+    .button {
+        width: 90%; /* Make buttons full width on small screens */
+        font-size: 1rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    .hero-content {
+        padding: var(--spacing-sm);
+    }
+}

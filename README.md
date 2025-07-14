@@ -1,4 +1,3 @@
-
 # Project Sankofa
 
 ## Executive Snapshot
@@ -6,6 +5,45 @@
 ### Purpose
 
 Project Sankofa is a multi-format, mythic-psychology research and storytelling initiative tackling the **Modern Meaning Crisis**—why so many young people feel lost, disconnected, and hungry for purpose.
+
+---
+
+## Repository Structure 
+
+This repository is organized to separate the published GitHub Pages site from development assets and research content:
+
+### 📁 `/docs` - GitHub Pages Site
+**IMPORTANT**: This folder contains the live GitHub Pages website and should never be renamed or have its structure changed.
+- `index.html` - Main website
+- `stylesheet.css` - Site styling  
+- Media assets for the live site
+- **This folder is what visitors see at your GitHub Pages URL**
+
+### 📁 `/development` - Development Assets
+All development iterations, prototypes, and working files:
+- `portfolio-iterations/` - All website iterations (Claude, Gemini versions, backups)
+- `assets/` - Development assets and backup files
+
+### 📁 `/content` - Research & Documentation  
+Organized research materials and project documentation:
+- `briefs/` - Executive briefs, production documents, synthesis maps
+- `commissioning/` - Project commissioning and requirements documents
+- `research/` - Research inputs, raw findings, and analysis
+
+### 📁 `/assets` - Organized Media Files
+Production-ready media files organized by type:
+- `images/` - Visual assets, including archetype wheels and graphics
+- `audio/` - Audio content including podcast episodes
+- `documents/` - Document assets and PDFs
+
+### 📁 `/utilities` - Tools & Scripts
+Scripts and tools for repository management:
+- `cleanup-repo.ps1` - Repository organization script
+
+### 📁 `/archive` - Historical Organization
+Previous organizational structure preserved for reference:
+- Numbered folders (`01-core`, `02-assets`, etc.)
+- Template consolidation materials
 
 ---
 
