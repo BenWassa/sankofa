@@ -1,9 +1,0 @@
-# Project Sankofa - Web Project .gitignore
-
-node_modules/
-*.log
-.env
-.DS_Store
-Thumbs.db
-dist/
-build/
