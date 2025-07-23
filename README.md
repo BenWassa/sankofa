@@ -16,8 +16,19 @@ This repository is organized to separate the published GitHub Pages site from de
 **IMPORTANT**: This folder contains the live GitHub Pages website and should never be renamed or have its structure changed.
 - `index.html` - Main website
 - `stylesheet.css` - Site styling  
-- Media assets for the live site
+- Media assets for the live site (images, audio, PDF)
 - **This folder is what visitors see at your GitHub Pages URL**
+
+#### Active Webpage Outputs (`docs/index.html`)
+The published site includes:
+- **Hero Section**: Project tagline, translation, and mission statement
+- **Navigation**: Home, About, Podcast, Brief, Visuals
+- **About Section**: Project overview and research summary
+- **Podcast Section**: Embedded audio player for "Episode 1: The Modern Meaning Crisis" (`Project Sankofa.mp3`)
+- **Executive Brief Section**: Downloadable PDF summary (`Executive Brief.pdf`)
+- **Visual Library**: Visual cards for Archetype Wheel (`A - final_SVG.svg`), Synthesis Map (`synthesis-map.svg`), and Meaning Framework (`meaning-framework.svg`)
+- **Archetypes Section**: Overview of the three solution archetypes with supporting image (`A - final_PNG.png`)
+- **Footer**: Credits, proverb, and design note
 
 ### 📁 `/development` - Development Assets
 All development iterations, prototypes, and working files:
@@ -39,6 +50,7 @@ Production-ready media files organized by type:
 ### 📁 `/utilities` - Tools & Scripts
 Scripts and tools for repository management:
 - `cleanup-repo.ps1` - Repository organization script
+- `generate-status.bat` / `generate-status.ps1` - Repository status snapshot utility
 
 ### 📁 `/archive` - Historical Organization
 Previous organizational structure preserved for reference:
