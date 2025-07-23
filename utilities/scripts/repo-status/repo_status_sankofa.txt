@@ -1,6 +1,6 @@
 ==============================
 PROJECT SANKOFA - REPO SNAPSHOT  
-Generated: Mon, Jul 14, 2025 04:53:20 PM
+Generated: Tue, Jul 22, 2025 09:27:03 PM
 ==============================
 
 [PROJECT OVERVIEW]
@@ -18,7 +18,7 @@ Structure: Organized repository with GitHub Pages site
 ✓ PASS development/ - Development iterations and assets - 32 items
 ✓ PASS content/ - Research, briefs, and documentation - 10 items
 ✓ PASS assets/ - Organized media files - 18 items
-✓ PASS utilities/ - Tools and scripts - 8 items
+✓ PASS utilities/ - Tools and scripts - 9 items
 ✗ FAIL archive/ - MISSING - Historical organization
 
 [GITHUB PAGES STATUS]
@@ -56,7 +56,8 @@ Structure: Organized repository with GitHub Pages site
 
 [GIT STATUS]
 Working directory changes:
-?? utilities/
+ M utilities/scripts/repo-status/generate_status.py
+ M utilities/scripts/repo-status/repo_status_sankofa.txt
 ✓ Current branch: main
 
 [KEY FILES STATUS]
@@ -69,11 +70,11 @@ Working directory changes:
 
 [RECENT ACTIVITY]
 Recent commits:
+7fb3306 Add generate-status script and repository status report generation
 c172973 del
 af6d069 clean up of repo from template repo
 1f1023a exec brief path fix
 a1cdb05 link mp3
-358e454 update file paths
 
 [SUMMARY]
 Project: Project Sankofa
