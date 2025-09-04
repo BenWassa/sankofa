@@ -973,6 +973,13 @@ p {
     border-radius: var(--border-radius);
 }
 
+.synthesis-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .synthesis-explanation {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1003,6 +1010,44 @@ p {
 
 .synthesis-feature p {
     color: var(--text-secondary);
+}
+
+.synthesis-feature ul {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.synthesis-howto {
+    text-align: left;
+}
+
+.synthesis-crosslinks,
+.synthesis-legend {
+    text-align: left;
+    padding: 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-top: 2rem;
+}
+
+.synthesis-crosslinks h3,
+.synthesis-legend h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.synthesis-crosslinks ul,
+.synthesis-legend ul {
+    padding-left: 1.2rem;
+}
+
+.synthesis-crosslinks li,
+.synthesis-legend li {
+    margin-bottom: 0.5rem;
 }
 
 /* Active nav link */
