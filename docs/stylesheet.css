@@ -848,6 +848,225 @@ p {
     }
 }
 
+/* New Visual Page Styles */
+
+/* Visual Hero Section */
+.visual-hero {
+    min-height: 60vh;
+    background: var(--primary-dark) url('Sankofa_back_blur_PNG.png') center center / cover no-repeat;
+    background-size: 120%;
+    filter: blur(0.3px) brightness(0.9) saturate(1.2);
+}
+
+.visual-hero .hero-content {
+    transform: translateY(50px);
+}
+
+/* Placeholder Visual Styles */
+.placeholder-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    background: linear-gradient(135deg, var(--accent-dark), var(--secondary-dark));
+    border-radius: var(--border-radius);
+    border: 2px dashed rgba(212, 175, 55, 0.3);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.placeholder-visual:hover {
+    border-color: var(--accent-gold);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), var(--accent-dark));
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Framework Placeholder */
+.framework-placeholder {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    border: 2px dashed rgba(212, 175, 55, 0.3);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.framework-placeholder:hover {
+    border-color: var(--accent-gold);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), var(--accent-dark));
+}
+
+.placeholder-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.placeholder-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.placeholder-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placeholder-features {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--accent-gold);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Section CTA */
+.section-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Synthesis Map Styles */
+.synthesis-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.synthesis-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.synthesis-explanation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.synthesis-feature {
+    text-align: center;
+    padding: 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.synthesis-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--accent-gold);
+}
+
+.synthesis-feature h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.synthesis-feature p {
+    color: var(--text-secondary);
+}
+
+/* Active nav link */
+.nav-link.active {
+    color: var(--accent-gold);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Coming soon visual card */
+.visual-card.coming-soon {
+    opacity: 0.8;
+}
+
+.visual-card.coming-soon:hover {
+    opacity: 1;
+}
+
+/* Interest expressed state */
+.visual-card.interest-expressed,
+.framework-section.interest-expressed {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Visual link styling */
+.visual-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+.visual-link:hover {
+    transform: scale(1.02);
+}
+
+/* Loading states */
+.visual-card.loading .visual-image {
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.visual-card.loaded .visual-image {
+    opacity: 1;
+    filter: none;
+}
+
+.visual-card.error .visual-image {
+    opacity: 0.3;
+    filter: grayscale(1);
+}
+
+.audio-player.loading {
+    opacity: 0.7;
+}
+
+.audio-player.ready {
+    opacity: 1;
+}
+
 /* Focus styles for keyboard navigation */
 .nav-link:focus,
 .btn:focus {
