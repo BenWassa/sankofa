@@ -1,9 +1,203 @@
-/* Archetype Wheel Image Styling */
+/* Visuals Page Specific Spacing */
+.visual-hero {
+    padding: 4rem 0 2rem 0;
+    min-height: 60vh;
+}
+
+.visual-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.visual-hero .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.visual-hero .hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Section Spacing for Visuals Page */
+.visuals-section {
+    padding: 4rem 0;
+}
+
+.archetypes-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--accent-dark) 100%);
+}
+
+.synthesis-section {
+    padding: 5rem 0;
+    background: var(--primary-dark);
+}
+
+.framework-section {
+    padding: 5rem 0 6rem 0;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--secondary-dark) 100%);
+}
+
+/* Visual Grid Improvements */
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Archetype Features Spacing */
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.about-features .feature {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--secondary-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    transition: var(--transition-smooth);
+}
+
+.about-features .feature:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--accent-gold);
+}
+
+.about-features .feature h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.about-features .feature p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Synthesis Content Layout */
+.synthesis-content {
+    margin-top: 4rem;
+}
+
+.synthesis-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.synthesis-howto {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.synthesis-howto h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.synthesis-howto p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.synthesis-research-link {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--secondary-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 600px;
+    margin: 4rem auto 0 auto;
+}
+
+.synthesis-research-link h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.synthesis-research-link p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* Framework Placeholder Improvements */
+.framework-placeholder {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placeholder-content h3 {
+    color: var(--accent-gold);
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.placeholder-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placeholder-features {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature-tag {
+    background: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Image Wrapper Improvements */
 .archetype-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 2.5rem auto;
+    margin: 4rem auto;
+    max-width: 600px;
     box-shadow: 0 8px 32px rgba(212, 175, 55, 0.507), 0 2px 8px rgba(245, 215, 83, 0.18);
     border-radius: 18px;
     background: var(--accent-dark);
@@ -808,9 +1002,16 @@ p {
     
     .visual-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
     }
     
     .about-features {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .synthesis-overview {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -821,6 +1022,42 @@ p {
     
     .nav-container {
         justify-content: center;
+    }
+    
+    /* Visuals page mobile adjustments */
+    .visual-hero {
+        padding: 3rem 0 1.5rem 0;
+        min-height: 50vh;
+    }
+    
+    .visual-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .visuals-section,
+    .archetypes-section,
+    .synthesis-section,
+    .framework-section {
+        padding: 3rem 0;
+    }
+    
+    .about-features .feature {
+        padding: 2rem 1.5rem;
+    }
+    
+    .synthesis-howto,
+    .synthesis-research-link,
+    .framework-placeholder {
+        padding: 2rem 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .archetype-image-wrapper,
+    .synthesis-image-wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1.5rem;
     }
 }
 
@@ -958,12 +1195,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin: 3rem auto 4rem auto;
     padding: 2rem;
     background: var(--accent-dark);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-ancient);
     border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 900px;
 }
 
 .synthesis-image {
