@@ -196,17 +196,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4rem auto;
-    max-width: 600px;
-    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.507), 0 2px 8px rgba(245, 215, 83, 0.18);
-    border-radius: 18px;
+    margin: 2rem auto 3rem auto;
+    padding: 1rem;
     background: var(--accent-dark);
-    position: relative;
-    z-index: 2;
-    padding: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 1600px;
+    width: 95%;
     transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
-    max-width: fit-content;
-    width: auto;
 }
 
 .archetype-image-wrapper:hover {
@@ -214,14 +212,12 @@
 }
 
 .archetype-image {
-    display: block;
     width: 100%;
-    max-width: 540px;
+    max-width: 100%;
+    max-height: 600px;
     height: auto;
     object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.10);
-    background: var(--secondary-dark);
+    border-radius: var(--border-radius);
 }
 /* Project Sankofa - Mythic Psychology Portfolio */
 /* Ancient styling with modern functionality */
@@ -1190,18 +1186,41 @@ p {
     margin-top: 3rem;
 }
 
+/* Snapshot Image Styles */
+.snapshot-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 3rem auto;
+    padding: 1rem;
+    background: var(--accent-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-ancient);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    max-width: 1600px;
+    width: 95%;
+}
+
+.snapshot-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
 /* Synthesis Map Styles */
 .synthesis-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem auto 4rem auto;
-    padding: 2rem;
+    margin: 2rem auto 3rem auto;
+    padding: 1rem;
     background: var(--accent-dark);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-ancient);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    max-width: 900px;
+    max-width: 1600px;
+    width: 95%;
 }
 
 .synthesis-image {
