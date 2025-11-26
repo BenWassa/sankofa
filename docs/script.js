@@ -30,30 +30,44 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateActiveNavLink() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-link');
-        
+
+        navLinks.forEach(link => link.classList.remove('active'));
+
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            
-            // Check if link matches current page
-            const linkHref = link.getAttribute('href');
-            if (
-                (currentPage === 'index.html' && (linkHref === 'index.html' || linkHref.startsWith('#'))) ||
-                (currentPage === 'visuals.html' && linkHref === 'visuals.html') ||
-                linkHref === currentPage
-            ) {
+            const href = link.getAttribute('href') || '';
+            const isHashLink = href.startsWith('#');
+
+            // Let the intersection observer handle in-page links
+            if (isHashLink) return;
+
+            // Visuals page or other hard links
+            const normalizedHref = href.split('#')[0];
+            if (normalizedHref === currentPage || (currentPage === 'index.html' && normalizedHref === '')) {
                 link.classList.add('active');
             }
         });
+
+        // Default highlight on hero when on home
+        if (currentPage === 'index.html') {
+            const heroLink = document.querySelector('.nav-link[data-section="hero"]');
+            if (heroLink) heroLink.classList.add('active');
+        }
     }
     
     // Update active nav on page load
     updateActiveNavLink();
     
     // Intersection Observer for section highlighting
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const sectionNavLinks = document.querySelectorAll('.nav-link[data-section]');
+    const sectionLinkMap = {};
+
+    sectionNavLinks.forEach(link => {
+        const key = link.dataset.section;
+        if (key) sectionLinkMap[key] = link;
+    });
     
-    if (sections.length > 0) {
+    if (sections.length > 0 && sectionNavLinks.length > 0) {
         const observerOptions = {
             root: null,
             rootMargin: '-20% 0px -70% 0px',
@@ -64,14 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.getAttribute('id');
-                    
-                    // Update nav links for current page sections
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
+                    const targetLink = sectionLinkMap[sectionId];
+
+                    if (targetLink) {
+                        sectionNavLinks.forEach(link => link.classList.remove('active'));
+                        targetLink.classList.add('active');
+                    }
                 }
             });
         }, observerOptions);
